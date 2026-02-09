@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity — AI Chief of Staff | Powered by Gemini 3</title>
+    <meta name="description" content="Clarity uses Gemini 3's multimodal reasoning to eliminate corporate information overload. Upload documents, get instant intelligence, and communicate with clarity.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+                        <path d="M10 16C10 12.6863 12.6863 10 16 10C19.3137 10 22 12.6863 22 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="16" cy="20" r="2" fill="white"/>
+                        <path d="M13 22H19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#a855f7"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">Clarity</span>
+                <span class="logo-badge">Gemini 3</span>
+            </div>
+            <nav class="nav-tabs">
+                <button class="nav-tab active" data-tab="analyze" id="tab-analyze">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    Analyze
+                </button>
+                <button class="nav-tab" data-tab="translate" id="tab-translate">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Audience Lens
+                </button>
+                <button class="nav-tab" data-tab="crossref" id="tab-crossref">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    Cross-Intel
+                </button>
+                <button class="nav-tab" data-tab="chat" id="tab-chat">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Ask Clarity
+                </button>
+            </nav>
+            <div class="header-actions">
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span>Gemini 3 Connected</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- TAB 1: Analyze -->
+        <section class="tab-content active" id="panel-analyze">
+            <div class="hero-section">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Instant Intelligence</span>
+                    <br>from Any Document
+                </h1>
+                <p class="hero-subtitle">Upload contracts, reports, presentations, screenshots, or photos of whiteboards. Gemini 3's multimodal reasoning extracts what matters in seconds.</p>
+            </div>
+
+            <div class="upload-zone" id="upload-zone">
+                <div class="upload-zone-inner">
+                    <div class="upload-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Drop files here or click to upload</h3>
+                    <p>Supports PDF, Images, Screenshots, Text files — up to 20MB</p>
+                    <input type="file" id="file-input" multiple accept=".pdf,.png,.jpg,.jpeg,.webp,.gif,.txt,.md,.csv,.doc,.docx" hidden>
+                </div>
+            </div>
+
+            <!-- Uploaded Files Preview -->
+            <div class="files-preview" id="files-preview" style="display:none;">
+                <div class="files-list" id="files-list"></div>
+                <button class="btn-primary btn-analyze" id="btn-analyze">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10"/></svg>
+                    Analyze with Gemini 3
+                </button>
+            </div>
+
+            <!-- Analysis Results -->
+            <div class="analysis-results" id="analysis-results" style="display:none;">
+                <div class="results-header">
+                    <h2>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10"/></svg>
+                        Intelligence Report
+                    </h2>
+                    <div class="results-meta" id="results-meta"></div>
+                </div>
+                <div class="results-grid" id="results-grid"></div>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-state" id="loading-analyze" style="display:none;">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Gemini 3 is analyzing your documents...</p>
+                <p class="loading-subtext">Multimodal reasoning in progress</p>
+            </div>
+        </section>
+
+        <!-- TAB 2: Audience Lens -->
+        <section class="tab-content" id="panel-translate">
+            <div class="hero-section">
+                <h1 class="hero-title">
+                    <span class="gradient-text">One Document,</span>
+                    <br>Every Audience
+                </h1>
+                <p class="hero-subtitle">Transform any content into perfectly tailored communications for C-Suite, Engineers, Legal, or Clients. Same facts, different framing.</p>
+            </div>
+
+            <div class="translate-input-area">
+                <div class="textarea-wrapper">
+                    <textarea id="translate-input" placeholder="Paste your document content, email, report, or meeting notes here..." rows="6"></textarea>
+                    <div class="textarea-actions">
+                        <span class="char-count" id="char-count">0 chars</span>
+                    </div>
+                </div>
+                <div class="audience-selector">
+                    <h3>Select Target Audiences</h3>
+                    <div class="audience-chips">
+                        <button class="audience-chip selected" data-audience="csuite">
+                            <span class="chip-icon">👔</span> C-Suite
+                        </button>
+                        <button class="audience-chip selected" data-audience="engineering">
+                            <span class="chip-icon">⚙️</span> Engineering
+                        </button>
+                        <button class="audience-chip selected" data-audience="legal">
+                            <span class="chip-icon">⚖️</span> Legal
+                        </button>
+                        <button class="audience-chip" data-audience="clients">
+                            <span class="chip-icon">🤝</span> Clients
+                        </button>
+                        <button class="audience-chip" data-audience="hr">
+                            <span class="chip-icon">💼</span> HR
+                        </button>
+                        <button class="audience-chip" data-audience="marketing">
+                            <span class="chip-icon">📢</span> Marketing
+                        </button>
+                    </div>
+                </div>
+                <button class="btn-primary" id="btn-translate">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Translate for All Audiences
+                </button>
+            </div>
+
+            <div class="translate-results" id="translate-results" style="display:none;"></div>
+
+            <div class="loading-state" id="loading-translate" style="display:none;">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Crafting audience-specific communications...</p>
+                <p class="loading-subtext">Adapting tone, detail level, and framing</p>
+            </div>
+        </section>
+
+        <!-- TAB 3: Cross-Intel -->
+        <section class="tab-content" id="panel-crossref">
+            <div class="hero-section">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Cross-Document</span>
+                    <br>Intelligence
+                </h1>
+                <p class="hero-subtitle">Upload multiple documents and let Gemini 3 find contradictions, gaps, connected insights, and hidden risks across all of them.</p>
+            </div>
+
+            <div class="crossref-upload-area">
+                <div class="crossref-zones">
+                    <div class="crossref-zone" id="crossref-zone-a">
+                        <div class="crossref-zone-label">Document A</div>
+                        <div class="crossref-zone-inner">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            <p>Drop or click to upload</p>
+                            <input type="file" class="crossref-input" data-slot="a" accept=".pdf,.png,.jpg,.jpeg,.webp,.txt,.md,.csv" hidden>
+                        </div>
+                        <div class="crossref-file-name" id="crossref-name-a"></div>
+                    </div>
+                    <div class="crossref-vs">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+                    </div>
+                    <div class="crossref-zone" id="crossref-zone-b">
+                        <div class="crossref-zone-label">Document B</div>
+                        <div class="crossref-zone-inner">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                            <p>Drop or click to upload</p>
+                            <input type="file" class="crossref-input" data-slot="b" accept=".pdf,.png,.jpg,.jpeg,.webp,.txt,.md,.csv" hidden>
+                        </div>
+                        <div class="crossref-file-name" id="crossref-name-b"></div>
+                    </div>
+                </div>
+                <button class="btn-primary" id="btn-crossref" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    Run Cross-Document Analysis
+                </button>
+            </div>
+
+            <div class="crossref-results" id="crossref-results" style="display:none;"></div>
+
+            <div class="loading-state" id="loading-crossref" style="display:none;">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Cross-referencing documents...</p>
+                <p class="loading-subtext">Finding contradictions, gaps, and connected insights</p>
+            </div>
+        </section>
+
+        <!-- TAB 4: Ask Clarity (Chat) -->
+        <section class="tab-content" id="panel-chat">
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="chat-welcome">
+                        <div class="chat-welcome-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <h2>Ask Clarity Anything</h2>
+                        <p>I have context from all your uploaded documents. Ask me questions, request deeper analysis, or explore insights.</p>
+                        <div class="chat-suggestions">
+                            <button class="suggestion-chip" onclick="askSuggestion(this)">What are the top 3 risks in my documents?</button>
+                            <button class="suggestion-chip" onclick="askSuggestion(this)">Summarize everything in 5 bullet points</button>
+                            <button class="suggestion-chip" onclick="askSuggestion(this)">What action items should I prioritize?</button>
+                            <button class="suggestion-chip" onclick="askSuggestion(this)">Find any inconsistencies or red flags</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <div class="chat-input-wrapper">
+                        <textarea id="chat-input" placeholder="Ask about your documents..." rows="1"></textarea>
+                        <button class="chat-send-btn" id="btn-chat-send">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

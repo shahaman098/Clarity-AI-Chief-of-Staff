@@ -1,0 +1,32 @@
+QUARTERLY BUSINESS REPORT - Q4 2025
+Acme Corporation
+
+FINANCIAL HIGHLIGHTS:
+- Revenue: $45.2M (up 23% YoY)
+- Operating Costs: $38.1M (up 31% YoY)
+- Net Profit: $7.1M (down 5% YoY)
+- Customer Acquisition Cost increased from $120 to $185
+
+KEY METRICS:
+- Active Users: 2.1M (up 15%)  
+- Monthly Churn Rate: 4.8% (up from 3.2%)
+- NPS Score: 42 (down from 58)
+- Average Revenue Per User: $21.52
+
+STRATEGIC INITIATIVES:
+1. Platform Migration to Cloud - 60% complete, deadline extended to Q2 2026
+2. AI Integration Project - On track, beta testing with 500 users
+3. Partnership with TechVentures Inc - MOU signed, pending legal review
+4. New Market Expansion (Southeast Asia) - Delayed due to regulatory concerns
+
+RISKS:
+- Engineering team attrition rate at 18% - 3 senior engineers departed
+- Main competitor (GlobalTech) launched similar product at 40% lower price
+- Cloud migration costs exceeded budget by $2.3M
+- Data privacy audit found 3 medium-severity compliance gaps
+
+BOARD RECOMMENDATIONS:
+- Approve $5M emergency retention budget for engineering
+- Accelerate AI product launch to Q1 2026
+- Engage external counsel for Southeast Asia regulatory compliance
+- Commission competitive analysis report
