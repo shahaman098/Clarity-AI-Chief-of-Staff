@@ -39,6 +39,28 @@ The architecture calls Gemini 3 Flash Preview (`gemini-3-flash-preview`) via the
 - **Design**: Custom dark mode with glassmorphism, ambient lighting effects, and micro-animations
 - **Deployment**: Static files, zero dependencies
 
+## Live Demo
+[Try Clarity Live](https://clarity-gemini-3.vercel.app)
+
+## System Architecture
+
+```mermaid
+graph TD
+    User[User] -->|Uploads PDF/Images| UI[Web Interface]
+    UI -->|Base64 Encoding| Client[Client Logic]
+    Client -->|Multimodal Request| G3[Gemini 3 Flash API]
+    
+    subgraph "Gemini 3 Processing"
+        G3 -->|Reasoning Engine| Analyze[Document Analysis]
+        G3 -->|Perspective Taking| Audience[Audience Transformation]
+        G3 -->|Comparative Logic| CrossRef[Cross-Doc Intelligence]
+    end
+    
+    Analyze -->|JSON Structure| UI
+    Audience -->|Tailored Text| UI
+    CrossRef -->|Insights| UI
+```
+
 ## How to Run
 
 ```bash
