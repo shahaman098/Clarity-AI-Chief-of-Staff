@@ -1,0 +1,32 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e6]
+        - generic [ref=e10]: Clarity
+        - generic [ref=e11]: Gemini 3
+      - navigation [ref=e12]:
+        - button "Analyze" [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+          - text: Analyze
+        - button "Audience Lens" [ref=e17] [cursor=pointer]:
+          - img [ref=e18]
+          - text: Audience Lens
+        - button "Cross-Intel" [ref=e23] [cursor=pointer]:
+          - img [ref=e24]
+          - text: Cross-Intel
+        - button "Ask Clarity" [ref=e27] [cursor=pointer]:
+          - img [ref=e28]
+          - text: Ask Clarity
+      - generic [ref=e33]: Gemini 3 Connected
+  - main [ref=e34]:
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - heading "Instant Intelligence from Any Document" [level=1] [ref=e37]:
+          - text: Instant Intelligence
+          - text: from Any Document
+        - paragraph [ref=e38]: Upload contracts, reports, presentations, screenshots, or photos of whiteboards. Gemini 3's multimodal reasoning extracts what matters in seconds.
+      - generic [ref=e40] [cursor=pointer]:
+        - img [ref=e42]
+        - heading "Drop files here or click to upload" [level=3] [ref=e45]
+        - paragraph [ref=e46]: Supports PDF, Images, Screenshots, Text files — up to 20MB
